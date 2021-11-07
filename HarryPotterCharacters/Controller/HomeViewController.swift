@@ -134,8 +134,6 @@ extension HomeViewController {
             // Stores response data in characters array
             guard let characters = response.value else { return }
             
-            print(response)
-            
             // Iterate through characters array, appending the name from decoded JSON Data
             // to the relevant array
             for character in characters {
