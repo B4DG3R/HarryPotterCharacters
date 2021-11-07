@@ -12,6 +12,7 @@
 		237B9F852734FE1800345BC3 /* NameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B9F842734FE1800345BC3 /* NameCell.swift */; };
 		237B9F872734FFF000345BC3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B9F862734FFF000345BC3 /* DetailsViewController.swift */; };
 		237B9F892735028800345BC3 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237B9F882735028800345BC3 /* CharacterCell.swift */; };
+		23ED1F4E2738766E009ED822 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED1F4D2738766E009ED822 /* CharacterDetailsViewController.swift */; };
 		BD6E171826831F0B00A5B1A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E171726831F0B00A5B1A8 /* AppDelegate.swift */; };
 		BD6E171A26831F0B00A5B1A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E171926831F0B00A5B1A8 /* SceneDelegate.swift */; };
 		BD6E171C26831F0B00A5B1A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E171B26831F0B00A5B1A8 /* HomeViewController.swift */; };
@@ -25,6 +26,7 @@
 		237B9F842734FE1800345BC3 /* NameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCell.swift; sourceTree = "<group>"; };
 		237B9F862734FFF000345BC3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		237B9F882735028800345BC3 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		23ED1F4D2738766E009ED822 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		5F7772F72487CB9D5FF3F354 /* Pods-HarryPotterCharacters.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharacters.debug.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharacters/Pods-HarryPotterCharacters.debug.xcconfig"; sourceTree = "<group>"; };
 		70BABD16CF63A89741690CC6 /* Pods_HarryPotterCharacters.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HarryPotterCharacters.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A2E1E4374C13F89878D93F1 /* Pods-HarryPotterCharacters.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HarryPotterCharacters.release.xcconfig"; path = "Target Support Files/Pods-HarryPotterCharacters/Pods-HarryPotterCharacters.release.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				BD6E171B26831F0B00A5B1A8 /* HomeViewController.swift */,
 				237B9F862734FFF000345BC3 /* DetailsViewController.swift */,
+				23ED1F4D2738766E009ED822 /* CharacterDetailsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD6E171C26831F0B00A5B1A8 /* HomeViewController.swift in Sources */,
+				23ED1F4E2738766E009ED822 /* CharacterDetailsViewController.swift in Sources */,
 				237B9F852734FE1800345BC3 /* NameCell.swift in Sources */,
 				BD6E171826831F0B00A5B1A8 /* AppDelegate.swift in Sources */,
 				237B9F892735028800345BC3 /* CharacterCell.swift in Sources */,
