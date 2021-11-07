@@ -28,4 +28,14 @@ The three fetch data functions in the HomeViewController could be refactored int
 The house sorting code could also be moved out of fetchAllCharacterData() and into its own function, although it may not be anymore efficent, it would give the code better structure and look alot better.
 
 
+Dependencies
+-
+
+Alamofire
+
+Dependency Management
+-
+
+Cocoapods
+
 
