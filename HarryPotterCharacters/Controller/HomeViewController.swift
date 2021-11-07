@@ -12,14 +12,14 @@ class HomeViewController: UICollectionViewController {
     
     var buttonsArray:           [String] = []
     
-    var allCharactersArray:     [String] = []
-    var studentCharacterArray:  [String] = []
-    var staffCharacterArray:    [String] = []
+    var allCharactersArray:     [[String]] = []
+    var studentCharacterArray:  [[String]] = []
+    var staffCharacterArray:    [[String]] = []
     
-    var gryffindorArray:        [String] = []
-    var hufflepuffArray:        [String] = []
-    var ravenclawArray:         [String] = []
-    var slytherinArray:         [String] = []
+    var gryffindorArray:        [[String]] = []
+    var hufflepuffArray:        [[String]] = []
+    var ravenclawArray:         [[String]] = []
+    var slytherinArray:         [[String]] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,7 +74,7 @@ class HomeViewController: UICollectionViewController {
         
         let name = buttonsArray[indexPath.item]
         
-        var array: [String]?
+        var array: [[String]]?
         var arrayName: String?
         
         // populates array with correct character data to send to details view controller
@@ -117,6 +117,7 @@ class HomeViewController: UICollectionViewController {
         
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
 }
 
 // MARK: JSON Data Call
@@ -133,23 +134,35 @@ extension HomeViewController {
             // Stores response data in characters array
             guard let characters = response.value else { return }
             
+            print(response)
+            
             // Iterate through characters array, appending the name from decoded JSON Data
             // to the relevant array
             for character in characters {
                 
-                // Appends to all characters array
-                self.allCharactersArray.append(character.name ?? "No Data Found")
+                var characterDetails: [String] = []
+                
+                // Appends character details to characterDetals array
+                characterDetails.append(character.name ?? "No Data Found")
+                characterDetails.append(character.gender ?? "No Data Found")
+                characterDetails.append(character.house ?? "No Data Found")
+                characterDetails.append(character.dateOfBirth ?? "No Data Found")
+                characterDetails.append(character.patronus ?? "No Data Found")
+                characterDetails.append(character.actor ?? "No Data Found")
+                
+                // Appends the above array to allCharactersArray
+                self.allCharactersArray.append(characterDetails)
                 
                 // Appends each character to the relevant array by house
                 // some characters dont have a 'house' hence no else statement.
                 if character.house == "Gryffindor" {
-                    self.gryffindorArray.append(character.name ?? "No Data Found")
+                    self.gryffindorArray.append(characterDetails)
                 } else if character.house == "Slytherin" {
-                    self.slytherinArray.append(character.name ?? "No Data Found")
+                    self.slytherinArray.append(characterDetails)
                 } else if character.house == "Ravenclaw" {
-                    self.ravenclawArray.append(character.name ?? "No Data Found")
+                    self.ravenclawArray.append(characterDetails)
                 } else if character.house == "Hufflepuff" {
-                    self.hufflepuffArray.append(character.name ?? "No Data Found")
+                    self.hufflepuffArray.append(characterDetails)
                 }
             }
         }
@@ -169,7 +182,18 @@ extension HomeViewController {
             // Iterate through characters array, appending the name from decoded JSON Data
             // to the student array
             for character in characters {
-                self.studentCharacterArray.append(character.name ?? "No Data Found")
+                
+                var characterDetails: [String] = []
+                
+                // Appends character details to characterDetals array
+                characterDetails.append(character.name ?? "No Data Found")
+                characterDetails.append(character.gender ?? "No Data Found")
+                characterDetails.append(character.house ?? "No Data Found")
+                characterDetails.append(character.dateOfBirth ?? "No Data Found")
+                characterDetails.append(character.patronus ?? "No Data Found")
+                characterDetails.append(character.actor ?? "No Data Found")
+                
+                self.studentCharacterArray.append(characterDetails)
             }
 
         }
@@ -189,7 +213,18 @@ extension HomeViewController {
             // Iterate through characters array, appending the name from decoded JSON Data
             // to the staff array
             for character in characters {
-                self.staffCharacterArray.append(character.name ?? "No Data Found")
+                
+                var characterDetails: [String] = []
+                
+                // Appends character details to characterDetals array
+                characterDetails.append(character.name ?? "No Data Found")
+                characterDetails.append(character.gender ?? "No Data Found")
+                characterDetails.append(character.house ?? "No Data Found")
+                characterDetails.append(character.dateOfBirth ?? "No Data Found")
+                characterDetails.append(character.patronus ?? "No Data Found")
+                characterDetails.append(character.actor ?? "No Data Found")
+                
+                self.staffCharacterArray.append(characterDetails)
             }
         }
     }

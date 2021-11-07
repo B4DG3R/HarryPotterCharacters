@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,6 +110,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ky-ty-pUq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1165" y="102"/>
+        </scene>
+        <!--Character Details View Controller-->
+        <scene sceneID="4O0-AM-cbe">
+            <objects>
+                <viewController storyboardIdentifier="CharacterDetailsViewController" id="z7f-8e-5pg" customClass="CharacterDetailsViewController" customModule="HarryPotterCharacters" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dab-Wq-0wj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sl8-qQ-CnB">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tfz-QS-1uD" userLabel="name">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="129.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwV-s0-b74" userLabel="gender">
+                                        <rect key="frame" x="0.0" y="129.5" width="374" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDC-13-woF" userLabel="dateOfBirth">
+                                        <rect key="frame" x="0.0" y="259.5" width="374" height="129.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28D-kx-jfY" userLabel="house">
+                                        <rect key="frame" x="0.0" y="389" width="374" height="129.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rR2-9D-sY4" userLabel="patronus">
+                                        <rect key="frame" x="0.0" y="518.5" width="374" height="130"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUh-06-cfH" userLabel="actor">
+                                        <rect key="frame" x="0.0" y="648.5" width="374" height="129.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OHW-39-Nya"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sl8-qQ-CnB" firstAttribute="topMargin" secondItem="OHW-39-Nya" secondAttribute="top" constant="20" id="05D-yv-j1W"/>
+                            <constraint firstItem="OHW-39-Nya" firstAttribute="trailing" secondItem="sl8-qQ-CnB" secondAttribute="trailing" constant="20" id="MdO-xU-ezi"/>
+                            <constraint firstItem="sl8-qQ-CnB" firstAttribute="leading" secondItem="OHW-39-Nya" secondAttribute="leading" constant="20" id="ZFK-Ge-Qna"/>
+                            <constraint firstItem="OHW-39-Nya" firstAttribute="bottom" secondItem="sl8-qQ-CnB" secondAttribute="bottom" constant="20" id="zFA-bg-5cJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="actorLabel" destination="gUh-06-cfH" id="IJO-rn-C21"/>
+                        <outlet property="dateOfBirthLabel" destination="WDC-13-woF" id="oAZ-H5-8Cs"/>
+                        <outlet property="genderLabel" destination="BwV-s0-b74" id="BJx-Nc-Tx4"/>
+                        <outlet property="houseLabel" destination="28D-kx-jfY" id="b7i-jp-PLa"/>
+                        <outlet property="nameLabel" destination="tfz-QS-1uD" id="8qQ-5N-aBf"/>
+                        <outlet property="patronusLabel" destination="rR2-9D-sY4" id="AtT-LK-RGU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x8b-hQ-lfW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2170" y="102"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JCS-dv-XQE">
