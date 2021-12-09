@@ -53,6 +53,15 @@ class CharacterDetailsViewController: UIViewController {
         patronusLabel.text = "Patronus: \(patronus ?? "No Data Found")"
         actorLabel.text = "Actor: \(actor ?? "No Data Found")"
         
+        let favorites = UIBarButtonItem(image: UIImage(systemName: "star"), style: .plain, target: self, action: #selector(favoriteStudent))
+        navigationItem.rightBarButtonItem = favorites
+        
     }
+}
 
+extension CharacterDetailsViewController {
+    
+    @objc func favoriteStudent() {
+        
+    }
 }

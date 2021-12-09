@@ -43,7 +43,12 @@ class HomeViewController: UICollectionViewController {
         title = "Harry Potter Movie Characters"
         
         // Adds padding around collectionView cells
-        collectionView!.contentInset = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)   
+        collectionView!.contentInset = UIEdgeInsets(top: 40, left: 40, bottom: 40, right: 40)
+        
+        let favorites = UIBarButtonItem(image: UIImage(systemName: "star"), style: .plain, target: self, action: #selector(favoriteStudents))
+        navigationItem.rightBarButtonItem = favorites
+        
+        tabBarController?.navigationItem.leftBarButtonItem = favorites
         
     }
     
@@ -225,6 +230,14 @@ extension HomeViewController {
                 self.staffCharacterArray.append(characterDetails)
             }
         }
+    }
+}
+
+// MARK: Helper Functions
+extension HomeViewController {
+    
+    @objc func favoriteStudents() {
+        print("Favorite Tapped")
     }
 }
 
